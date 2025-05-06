@@ -1,131 +1,53 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: white;
     text-align: center;
-    padding: 60px 20px;
-    animation: fadeIn 3s ease-in;
-    position: relative;
+    padding: 50px;
+    animation: fadeIn 2s ease-in;
 }
 
-header .header-content h1 {
-    font-size: 60px;
-    font-weight: bold;
-    margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+h1 {
+    font-size: 36px;
 }
 
-header .header-content p {
-    font-size: 22px;
-    margin-top: 15px;
-    font-style: italic;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-section {
-    padding: 70px 20px;
+#content {
     text-align: center;
-    background-color: #ecf0f1;
-}
-
-section h2 {
-    font-size: 42px;
-    color: #34495e;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-section p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-#about h2, #genres h2, #anime-gallery h2, #animation-effects h2 {
-    margin-top: 0;
-}
-
-#genres .genres-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.genre-item {
-    width: 300px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.genre-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.genre-item:hover img {
-    transform: scale(1.1);
-}
-
-.genre-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
 }
 
 .image-gallery {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
-    animation: slideIn 3s ease-in-out;
+    animation: slideIn 2s ease-in-out;
 }
 
 .image-gallery img {
     width: 300px;
     height: 200px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .image-gallery img:hover {
     transform: scale(1.1);
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .animation-box {
     width: 150px;
     height: 150px;
-    margin: 20px auto;
     background-color: #e74c3c;
-    border-radius: 10px;
-    animation: bounce 3s infinite ease-in-out;
-}
-
-.animation-box-second {
-    width: 150px;
-    height: 150px;
     margin: 20px auto;
-    background-color: #9b59b6;
+    animation: bounce 2s infinite;
     border-radius: 10px;
-    animation: bounce 2s infinite ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -134,7 +56,7 @@ section p {
 }
 
 @keyframes slideIn {
-    0% { opacity: 0; transform: translateX(-100%); }
+    0% { opacity: 0; transform: translateX(-50%); }
     100% { opacity: 1; transform: translateX(0); }
 }
 
@@ -144,59 +66,11 @@ section p {
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
+    position: fixed;
     width: 100%;
-    font-size: 14px;
-}
-
-footer p {
-    margin: 0;
-    padding: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-#anime-gallery {
-    margin-top: 50px;
-}
-
-.anime-image {
-    transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-.anime-image:hover {
-    transform: scale(1.1);
-    filter: brightness(1.1);
-}
-
-@media (max-width: 768px) {
-    header .header-content h1 {
-        font-size: 45px;
-    }
-
-    header .header-content p {
-        font-size: 18px;
-    }
-
-    #genres .genres-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .genre-item {
-        width: 250px;
-    }
-
-    .image-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .anime-image {
-        width: 90%;
-    }
+    bottom: 0;
 }
